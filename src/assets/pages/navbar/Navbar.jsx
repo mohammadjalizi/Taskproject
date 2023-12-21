@@ -1,9 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+    const navigate = useNavigate();
+
   return (
     <div>
-        <header className=' flex justify-between  md:mx-16'>
+ <header className=' flex justify-between items-center  md:mx-16'>
 
 
 <h1>  mohammadjalizi</h1>
@@ -11,7 +14,11 @@ const Navbar = () => {
 
 <ul className=' flex  border gap-20  border-b-green-500 p-4 '>
 
-<li className=' cursor-pointer '>             Sign-in  </li>
+<li className=' cursor-pointer ' onClick={()=>{
+
+    
+    navigate("/singin")
+}}>             Sign-in  </li>
 <li className=' cursor-pointer '>       Sign-up</li>
 <li className=' cursor-pointer '>    Sign-out</li>
 <li className=' cursor-pointer '>         About</li>
