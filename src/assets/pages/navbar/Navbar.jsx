@@ -9,7 +9,11 @@ const Navbar = () => {
  <header className=' flex justify-between items-center  md:mx-16'>
 
 
-<h1>  mohammadjalizi</h1>
+<h1 onClick={() => { 
+
+navigate("/")
+
+ }} className=' cursor-pointer '>  mohammadjalizi</h1>
 
 
 <ul className=' flex  border gap-20  border-b-green-500 p-4 '>
