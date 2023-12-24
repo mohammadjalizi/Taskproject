@@ -1,11 +1,16 @@
-import React from 'react'
+
 import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { auth } from 'firbase/Firebase'
+import { auth } from "../../../firbase/Firebase";
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { useState } from 'react';
 
 const Singnin = () => {
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+
   createUserWithEmailAndPassword(auth, email, password)
+
   return (
 
 
@@ -21,21 +26,46 @@ const Singnin = () => {
 
 <form className='  flex flex-col gap-9   w-56 '> 
 
-<input  className=' shadow-stone-400 rounded-sm bg-gray-300  text-pink-500 '  type='email'  placeholder='Email'/>
-<input className=' shadow-stone-400 rounded-sm bg-gray-300  text-pink-500 '   type='Pasword'  placeholder='pasword'/>
+<input  onChange={(e)=>{
 
-<button  onClick={()=>{
- .then((userCredential) => {
-  // Signed up 
+setemail(e.target.value)
+console.log(e.target.value)
+
+}} className=' shadow-stone-400 rounded-sm bg-gray-300  text-pink-500 '  type='email'  placeholder='Email'/>
+<input onChange={(e)=>{
+setpassword(e.target.value)
+
+
+}} className=' shadow-stone-400 rounded-sm bg-gray-300  text-pink-500 '   type='Pasword'  placeholder='pasword'/>
+
+<button  onClick={(eo)=>{
+  
+eo.preventDefault()
+
+
+
+createUserWithEmailAndPassword(auth, email, password)
+.then((userCredential) => {
+  // Signed in 
   const user = userCredential.user;
+  console.log("doneeeeeeeeee")
   // ...
 })
 .catch((error) => {
   const errorCode = error.code;
   const errorMessage = error.message;
-  // ..
+  console.log(errorMessage)
+
 });
 
+
+
+
+
+
+
+
+  
 }} className=' bg-pink-600 rounded-2xl  shadow-2xl  '> Singnin </button>
 </form>
 </div>
