@@ -1,8 +1,11 @@
 import React from 'react'
 import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { auth } from 'firbase/Firebase'
 
 const Singnin = () => {
+  createUserWithEmailAndPassword(auth, email, password)
   return (
 
 
@@ -21,7 +24,19 @@ const Singnin = () => {
 <input  className=' shadow-stone-400 rounded-sm bg-gray-300  text-pink-500 '  type='email'  placeholder='Email'/>
 <input className=' shadow-stone-400 rounded-sm bg-gray-300  text-pink-500 '   type='Pasword'  placeholder='pasword'/>
 
-<button className=' bg-pink-600 rounded-2xl  shadow-2xl  '> Singnin </button>
+<button  onClick={()=>{
+ .then((userCredential) => {
+  // Signed up 
+  const user = userCredential.user;
+  // ...
+})
+.catch((error) => {
+  const errorCode = error.code;
+  const errorMessage = error.message;
+  // ..
+});
+
+}} className=' bg-pink-600 rounded-2xl  shadow-2xl  '> Singnin </button>
 </form>
 </div>
 
