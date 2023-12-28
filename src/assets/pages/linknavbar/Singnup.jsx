@@ -9,7 +9,7 @@ const Singnup = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
-  createUserWithEmailAndPassword(auth, email, password)
+
 
   return (
 
@@ -26,16 +26,16 @@ const Singnup = () => {
 
 <form className='  flex flex-col gap-9   w-56 '> 
 
-<input  onChange={(ev)=>{
+<input  onChange={(eo)=>{
 
-setemail(ev.target.value)
-console.log(ev.target.value)
+setemail(eo.target.value)
+console.log(email)
 
 
 }} className=' shadow-stone-400 rounded-sm bg-gray-300  text-pink-500 '  type='email'  placeholder='Email'/>
-<input onChange={(ev)=>{
-setpassword(ev.target.value)
-console.log(ev.target.value)
+<input onChange={(eo)=>{
+setpassword(eo.target.value)
+
 
 
 
@@ -69,7 +69,7 @@ createUserWithEmailAndPassword(auth, email, password)
 
 
   
-}} className=' bg-pink-600 rounded-2xl  shadow-2xl  '> Singnin </button>
+}} className=' bg-pink-600 rounded-2xl  shadow-2xl  '> Singnup </button>
 </form>
 </div>
 

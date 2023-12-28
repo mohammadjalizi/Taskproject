@@ -23,7 +23,11 @@ navigate("/")
     
     navigate("/singin")
 }}>             Sign-in  </li>
-<li className=' cursor-pointer '>       Sign-up</li>
+<li onClick={()=>{
+
+navigate("/singup")
+
+}} className=' cursor-pointer '>       Sign-up</li>
 <li className=' cursor-pointer '>    Sign-out</li>
 <li className=' cursor-pointer '>         About</li>
 <li className=' cursor-pointer '>Profile</li>
