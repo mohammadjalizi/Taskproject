@@ -2,7 +2,7 @@
 import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
 import { auth } from "../../../firbase/Firebase";
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 
 const Singnin = () => {
@@ -24,7 +24,49 @@ const Singnin = () => {
       <h1 className='  text-center  '> singh in page </h1>
 <div className=' flex justify-center items-center my-9'>
 
+<form className='  flex flex-col gap-9   w-56 '> 
 
+<input  onChange={(eo)=>{
+
+setemail(eo.target.value)
+console.log(email)
+
+
+}} className=' shadow-stone-400 rounded-sm bg-gray-300  text-pink-500 '  type='email'  placeholder='Email'/>
+<input onChange={(eo)=>{
+setpassword(eo.target.value)
+
+
+
+
+}} className=' shadow-stone-400 rounded-sm bg-gray-300  text-pink-500 '   type='password'  placeholder='pasword'/>
+
+<button  onClick={(eo)=>{
+  
+eo.preventDefault()
+
+
+
+signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
+
+
+
+
+
+
+
+  
+}} className=' bg-pink-600 rounded-2xl  shadow-2xl  '> Singnin </button>
+</form>
 </div>
 
       </div>
