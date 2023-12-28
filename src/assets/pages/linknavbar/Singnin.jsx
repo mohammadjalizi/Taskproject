@@ -26,17 +26,20 @@ const Singnin = () => {
 
 <form className='  flex flex-col gap-9   w-56 '> 
 
-<input  onChange={(e)=>{
+<input  onChange={(ev)=>{
 
-setemail(e.target.value)
-console.log(e.target.value)
+setemail(ev.target.value)
+console.log(ev.target.value)
+
 
 }} className=' shadow-stone-400 rounded-sm bg-gray-300  text-pink-500 '  type='email'  placeholder='Email'/>
-<input onChange={(e)=>{
-setpassword(e.target.value)
+<input onChange={(ev)=>{
+setpassword(ev.target.value)
+console.log(ev.target.value)
 
 
-}} className=' shadow-stone-400 rounded-sm bg-gray-300  text-pink-500 '   type='Pasword'  placeholder='pasword'/>
+
+}} className=' shadow-stone-400 rounded-sm bg-gray-300  text-pink-500 '   type='password'  placeholder='pasword'/>
 
 <button  onClick={(eo)=>{
   
