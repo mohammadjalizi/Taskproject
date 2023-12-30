@@ -2,14 +2,14 @@
 import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
 import { auth } from "../../../firbase/Firebase";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import {  signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 
 const Singnin = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
-  createUserWithEmailAndPassword(auth, email, password)
+
 
   return (
 

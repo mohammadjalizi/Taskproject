@@ -4,10 +4,12 @@ import Footer from '../footer/Footer'
 import { auth } from "../../../firbase/Firebase";
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Singnup = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  const navigate = useNavigate();
 
 
 
@@ -52,6 +54,7 @@ createUserWithEmailAndPassword(auth, email, password)
   // Signed in 
   const user = userCredential.user;
   console.log("doneeeeeeeeee")
+navigate("/singin")
   // ...
 })
 .catch((error) => {
