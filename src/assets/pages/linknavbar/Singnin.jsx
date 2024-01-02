@@ -4,6 +4,7 @@ import Footer from '../footer/Footer'
 import { auth } from "../../../firbase/Firebase";
 import {  signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
+import Modal from './Modal';
 
 const Singnin = () => {
   const [email, setemail] = useState("");
@@ -70,6 +71,7 @@ signInWithEmailAndPassword(auth, email, password)
 </div>
 
       </div>
+      <Modal/>
       <Footer/>
       
       </main>
