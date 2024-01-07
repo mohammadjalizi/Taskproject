@@ -16,3 +16,8 @@ direction: rtl;
 font-family: 'Cairo', sans-serif;
 
 }
+.border{
+
+border: 2px solid red;
+
+}

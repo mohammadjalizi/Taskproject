@@ -3,3 +3,40 @@ button{
     background-color: rgb(65 127 86 / var(--tw-bg-opacity));
 
 }
+.icons{
+    position: absolute;
+    top: 24px;
+    display: none;
+}
+
+.faEye{
+ 
+
+
+transition: 0.8s;
+
+}
+
+.faEye:hover {
+background-color: red;
+
+}
+.card{
+
+    border: none;
+    transition: 0.9s;
+}
+.card:hover{
+
+    border: 1px solid red;
+    transition: 1s;
+}
+
+.card:hover .icons{
+
+display: block;
+right: 30px;
+
+
+}
+
