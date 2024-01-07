@@ -1,3 +1,4 @@
+import Main2 from "../pages/main/Main2";
 import { auth } from "../../firbase/Firebase";
 import Footer from "../pages/footer/Footer"
 import Min from "../pages/main/Min"
@@ -11,9 +12,11 @@ const Header = () => {
         <Navbar/>
 
 <Min/>
+<Main2/>
 <Footer/>
 
     </main>
+
   )
 }
 

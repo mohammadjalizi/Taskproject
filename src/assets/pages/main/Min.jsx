@@ -2,6 +2,7 @@ import firstProjectPhoto from './imag/img1.jpg';
 import secondProjectPhoto from './imag/img2.jpg';
 import thirdProjectPhoto from './imag/img3.jpg';
 
+import './Main.css'
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,7 +16,7 @@ import { Pagination } from 'swiper/modules';
 
 const mySlider = [
   { text: "تجربه غذای سالم و گیاهی به سبک ترخینه", link: "src/assets/pages/main/imag/img1.jpg" },
-  { text: "WOMEN", link: "src/assets/pages/main/imag/img2.jpg" },
+  { text: "WOMEN", link: "src/assets/pages/main/imag/img3.jpg" },
 ];
 
 
@@ -45,12 +46,17 @@ return(
 
 <>
 
-<SwiperSlide className=' w-2/4 '  key={item.link}>
-<div>
-<img src={item.link} alt="" />
+<SwiperSlide className=' w-2/4 m-10 '  key={item.link}>
+<div className=' mt-6 '>
+<img className=' shadow-2xl rounded-2xl     w-full     mx-h-[33rem] m-auto ' src={item.link} alt="" />
 </div>
-<h1 className='  absolute top-2/4 left-2/4 bg-cyan-500 ' > {item.text} </h1>
 
+
+<div className='  text-center absolute top-2/4   left-1/3  '>
+<h1 className='  text-4xl  text-center   text-white ' > {item.text} </h1>
+ <button  className='  bg-green-700 py-3 text-white     my-6   ' >سفارش آنلاین غذا</button>
+
+</div>
 </SwiperSlide>
 </>
 
