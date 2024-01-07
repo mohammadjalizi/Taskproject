@@ -8,7 +8,7 @@ import { FaCartArrowDown } from "react-icons/fa";
 
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 // import required modules
 
@@ -61,8 +61,11 @@ const Main2 = () => {
       <Swiper 
         slidesPerView={3}
         spaceBetween={30}
-     
-        modules={[Pagination]}
+        autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+        modules={[Pagination,Autoplay]}
         className="mySwiper"
       >
    {mySlider.map((item)=>{
