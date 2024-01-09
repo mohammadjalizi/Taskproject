@@ -4,6 +4,7 @@ import Footer from "../pages/footer/Footer"
 import Min from "../pages/main/Min"
 import Navbar from "../pages/navbar/Navbar"
 import { useAuthState } from 'react-firebase-hooks/auth';
+import Main3 from "../pages/main/Main3";
 const Header = () => {
   const [user, loading, error] = useAuthState(auth);
   return (
@@ -13,6 +14,7 @@ const Header = () => {
 
 <Min/>
 <Main2/>
+<Main3/>
 <Footer/>
 
     </main>
